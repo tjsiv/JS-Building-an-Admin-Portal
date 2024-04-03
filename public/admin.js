@@ -1,4 +1,5 @@
-async function bkTracker(){ //should have all the ways to change the book quantity
+async function bkTracker(){ //should geet books and change them after with showBook
+
     let response = await fetch('http://localhost:3001/listBooks') //fetch rq for book list
  //response will return 4 books because unlinke before when we did this  let response = await fetch('http://localhost:3001/updateBook', {
     //     method: "PATCH",
@@ -12,7 +13,7 @@ async function bkTracker(){ //should have all the ways to change the book quanti
     // });
     // let updateBook = await response.json();
  //just putting it in as a url gets whole list
- 
+
     let books = await response.json() //the list of books stored in the book variable
     
     books.forEach(showBook)
